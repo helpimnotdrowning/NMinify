@@ -5,6 +5,12 @@
 # Artifacts are located in .bin\go\lib
 name: Build dependency
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
   push:
     # Only build on push to master and tag
     branches:
